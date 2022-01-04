@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.0.32014.148
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Bán_Hàng_Online_Winform", "Final_project\Bán_Hàng_Online_Winform.csproj", "{466EC21F-8836-4FF4-AD9E-F20C46ADF37C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Bán_Hàng_Onl_WebForm", "Bán_Hàng_Onl_WebForm\Bán_Hàng_Onl_WebForm.csproj", "{640292B9-9285-4328-B499-31C75E034458}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{466EC21F-8836-4FF4-AD9E-F20C46ADF37C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{466EC21F-8836-4FF4-AD9E-F20C46ADF37C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{466EC21F-8836-4FF4-AD9E-F20C46ADF37C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{466EC21F-8836-4FF4-AD9E-F20C46ADF37C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{640292B9-9285-4328-B499-31C75E034458}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{640292B9-9285-4328-B499-31C75E034458}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{640292B9-9285-4328-B499-31C75E034458}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{640292B9-9285-4328-B499-31C75E034458}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {D2BB6299-2FFD-43BD-9A1D-496221496702}
+	EndGlobalSection
+EndGlobal

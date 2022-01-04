@@ -1,0 +1,4 @@
+Role:
+admin:50
+Kế toán : 30
+Khách hàng : null

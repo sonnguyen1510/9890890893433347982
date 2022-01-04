@@ -1,0 +1,205 @@
+﻿@model List<Bán_Hàng_Onl_WebForm.Models.Product>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+
+
+
+
+}
+
+<style>
+    .w3-card, .w3-card-2 {
+        box-shadow: 0 2px 5px 0 rgba(0,0,0,0.16),0 2px 10px 0 rgba(0,0,0,0.12);
+        width: 300px;
+        height: min-content;
+        float: left;
+        margin: 1em;
+        display: block;
+    }
+
+    .item {
+        padding-left: 1.7em;
+        padding-top: 0.5em;
+    }
+
+    .BuyButton {
+        background-color: dodgerblue;
+        color: white;
+        padding-left: 2em;
+    }
+
+    .txtdeepshadow {
+        text-align: center;
+        font-family: "Avant Garde", Avantgarde, "Century Gothic", CenturyGothic, "AppleGothic", sans-serif;
+        font-size: 35px;
+        height: 90px;
+        padding-top: 20px;
+        color: #e0dfdc;
+        background-color: #333;
+        letter-spacing: .1em;
+        text-shadow: 0 -1px 0 #fff, 0 1px 0 #2e2e2e, 0 2px 0 #2c2c2c, 0 3px 0 #2a2a2a, 0 4px 0 #282828, 0 5px 0 #262626, 0 6px 0 #242424, 0 7px 0 #222, 0 8px 0 #202020, 0 9px 0 #1e1e1e, 0 10px 0 #1c1c1c, 0 11px 0 #1a1a1a, 0 12px 0 #181818, 0 13px 0 #161616, 0 14px 0 #141414, 0 15px 0 #121212, 0 22px 30px rgba(0, 0, 0, 0.9);
+    }
+
+    .row {
+        width: 1000px;
+        height: 1000px;
+        display: flex;
+        flex-direction: initial;
+        justify-content: left;
+    }
+
+    .block {
+        width: 100px;
+    }
+
+    .Clear {
+        clear: both
+    }
+
+    .marketing-button {
+        display: inline-block;
+        padding: 1em 1.8125em;
+        border-radius: 4px;
+        font-family: ShopifySans, Helvetica, Arial, sans-serif;
+        font-weight: 700;
+        font-size: 1em;
+        line-height: 1.133;
+        transition: 150ms ease;
+        transition-property: background-color, border-color, box-shadow, color;
+        text-align: center;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        user-select: none;
+        -webkit-appearance: none;
+        -moz-appearance: none;
+        appearance: none;
+        cursor: pointer;
+        box-shadow: 0 5px 15px 0 rgb(0 0 0 / 15%);
+        background-color: #008060;
+        color: #ffffff;
+        border-width: 1px;
+        border-style: solid;
+        border-color: transparent;
+        float: right
+    }
+
+    button {
+        background-color: darkturquoise;
+        color: white;
+        border-radius: 6px;
+        border: 0px solid;
+        width: 150px;
+        height: 50px
+    }
+</style>
+<link rel="stylesheet" href="~/Content/Design.css" />
+
+
+<div class="w3-panel w3-animate-opacity" style="padding-left: 2em;  width: 50%">
+    <div class="w3-tag w3-jumbo">S</div>
+    <div class="w3-tag w3-jumbo">A</div>
+    <div class="w3-tag w3-jumbo">L</div>
+    <div class="w3-tag w3-jumbo">E</div>
+</div>
+
+
+@if (Session["UserID"] == null)
+{
+    <div>
+        <a class="marketing-button" href="@Url.Action( "Sign_In", "Login")">Giỏ hàng</a>
+    </div> }
+else
+{
+    <div>
+        <a class="marketing-button" href="@Url.Action( "Index", "Cart")">Giỏ hàng</a>
+    </div>
+}
+<div class="container">
+
+    @if (Session["UserID"] == null)
+    {
+        foreach (var item in Model)
+        {
+
+
+            <div class="w3-card">
+                <center>
+                    <div><br /></div>
+                    <div>
+                        <img style="width :250px ; height :230px" src="data:image;base64,@System.Convert.ToBase64String(@item.Image)" />
+                    </div>
+                </center>
+                <div style="height:150px">
+                    <div>
+                        <p class="item"><b>Tên món ăn :</b>  @item.productName</p>
+                    </div>
+                    <div>
+                        <p class="item"><b>Mô tả món ăn:</b> <i>@item.productInfo</i></p>
+                    </div>
+                </div>
+                <div>
+                    <p class="txtdeepshadow"> @item.Productprice VND</p>
+                </div>
+                <div>
+                    <center>
+                        <button onclick="location.href = '@Url.Action("Sign_In", "Login")'">Thêm giỏ hàng</button>
+                    </center>
+
+                </div>
+                <div><br /></div>
+                <div class="Clear"></div>
+
+            </div>
+
+        }
+    }
+    else
+    {
+        foreach (var item in Model)
+        {
+
+
+            <div class="w3-card">
+                <center>
+                    <div><br /></div>
+                    <div>
+                        <img style="width :250px ; height :230px" src="data:image;base64,@System.Convert.ToBase64String(@item.Image)" />
+                    </div>
+                </center>
+                <div style="height:150px">
+                    <div>
+                        <p class="item"><b>Tên món ăn :</b>  @item.productName</p>
+                    </div>
+                    <div>
+                        <p class="item"><b>Mô tả món ăn:</b> <i>@item.productInfo</i></p>
+                    </div>
+                </div>
+                <div>
+                    <p class="txtdeepshadow"> @item.Productprice VND</p>
+                </div>
+                <div>
+                    <center>
+                        <button onclick="location.href = '@Url.Action("AddItem", "Cart", new { productID = @item.productID, quantity = 1 }, null)'">Thêm giỏ hàng</button>
+
+                    </center>
+
+                </div>
+                <div><br /></div>
+                <div class="Clear"></div>
+
+            </div>
+
+        }
+
+
+
+    }
+
+
+
+
+</div>
+

@@ -1,0 +1,26 @@
+﻿@{
+    ViewBag.Title = "Thông Tin Cá Nhân";
+    if(Session["UserID"] == null)
+    {
+        Response.Redirect("~/Login/Sign_In");
+    }
+    //ViewBag.Message = ""+ (int)Session["UserID"];
+}
+<h2 style="padding-left:10em ; padding-top:2em ; font-size:40px">@ViewBag.Title</h2>
+<style>
+    .INFO{
+        padding-top:0.4em;
+        padding-left:10em;
+    }
+</style>
+<div class="INFO">
+    <h3>Họ và Tên : @Session["FullName"].ToString()</h3>
+    <h3>Tài Khoản : @Session["UserName"].ToString()</h3>
+    <h3>ID : @Session["UserID"].ToString()</h3>
+    <h3>Email : @Session["Email"].ToString()</h3>
+    <h3>Phone : @Session["Phone"].ToString()</h3>
+    <h3>Giới tính : @Session["Gender"].ToString()</h3>
+    <h3>Ngày sinh : @Session["Birthday"].ToString()</h3>
+
+</div>
+

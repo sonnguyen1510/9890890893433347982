@@ -1,0 +1,80 @@
+﻿@model List<Bán_Hàng_Onl_WebForm.Models.CartItem>
+@{
+    ViewBag.Title = "Thanh Toán";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2 style="padding-left:10em ; padding-top:0.7em ;padding-bottom:0.4em; font-size:40px">@ViewBag.Title</h2>
+<style>
+    td {
+        border: 10px solid white;
+    }
+
+    i {
+        font-style: oblique
+    }
+</style>
+<div>
+    <div class="w3-section">
+        @if (Model.Count > 0)
+        {
+            <table style="text-align:center ; border-color:white;">
+                <thead>
+                    <tr>
+                        <td> <i>Mã sản phẩm</i></td>
+                        <td> <i>Tên sản phẩm</i></td>
+                        <td> <i>Hình ảnh mô tả</i></td>
+
+                        <td> <i>Số lượng</i></td>
+                        <td> <i>Đơn giá</i></td>
+                        <td> <i>Thành tiền</i></td>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach (var item in Model)
+                    {
+                        <tr>
+                            <td> @item.Product.productID</td>
+                            <td> @item.Product.productName</td>
+                            <td> <img style="width :100px ; height :80px" src="data:image;base64,@System.Convert.ToBase64String(@item.Product.Image)" /></td>
+                            <td> <input type="text" class="Quantity" data-id="@item.Product.productID" value="@item.Quantity" /></td>
+                            <td> @item.Product.Productprice.GetValueOrDefault(0)</td>
+                            <td> @(item.Quantity*item.Product.Productprice.GetValueOrDefault(0))</td>
+                        </tr>
+                    }
+                </tbody>
+            </table>
+        }
+
+
+    </div>
+
+    <div class="col-md-6" style="width:100%">
+        @using (Html.BeginForm("payment", "Cart", FormMethod.Post))
+        {
+            <div class="form-group">
+                <label>Khách Hàng</label>
+                <input name="CustomerName" class="form-control" />
+
+            </div>
+
+            <div class="form-group">
+                <label>Số điện thoại</label>
+                <input name="Phone" class="form-control" />
+
+            </div>
+            <div class="form-group">
+                <label>Địa chỉ</label>
+                <input name="Address" class="form-control" />
+
+            </div>
+
+            <button type="submit" class="btn"> Thanh Toán</button>
+        }
+    </div>
+
+
+    <br />
+    <br />
+</div>
+    

@@ -1,0 +1,250 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{466EC21F-8836-4FF4-AD9E-F20C46ADF37C}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>Final_project</RootNamespace>
+    <AssemblyName>Final_project</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Messaging" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Dialog\DialogQuenMatKhau.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Dialog\DialogQuenMatKhau.Designer.cs">
+      <DependentUpon>DialogQuenMatKhau.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Dialog\ĐặtLạiMậtKhẩu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Dialog\ĐặtLạiMậtKhẩu.Designer.cs">
+      <DependentUpon>ĐặtLạiMậtKhẩu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Dialog\Đổi_Mật_Khẩu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Dialog\Đổi_Mật_Khẩu.Designer.cs">
+      <DependentUpon>Đổi_Mật_Khẩu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Edit\Chỉnh_Sủa_Món_Ăn.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Edit\Chỉnh_Sủa_Món_Ăn.Designer.cs">
+      <DependentUpon>Chỉnh_Sủa_Món_Ăn.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Edit\Chỉnh_Sửa_Thông_Tin_Nhân_Viên.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Edit\Chỉnh_Sửa_Thông_Tin_Nhân_Viên.Designer.cs">
+      <DependentUpon>Chỉnh_Sửa_Thông_Tin_Nhân_Viên.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Kế_Toán_Form.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Kế_Toán_Form.Designer.cs">
+      <DependentUpon>Kế_Toán_Form.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Main.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Main.Designer.cs">
+      <DependentUpon>Main.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Show\Chọn_Hình_Ảnh_Món_Ăn.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Show\Chọn_Hình_Ảnh_Món_Ăn.Designer.cs">
+      <DependentUpon>Chọn_Hình_Ảnh_Món_Ăn.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Add\Thêm_Voucher.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Add\Thêm_Voucher.Designer.cs">
+      <DependentUpon>Thêm_Voucher.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Show\Thông_Tin_Hóa_Đơn.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Show\Thông_Tin_Hóa_Đơn.Designer.cs">
+      <DependentUpon>Thông_Tin_Hóa_Đơn.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Show\Thông_Tin_Mặt_Hàng.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Show\Thông_Tin_Mặt_Hàng.Designer.cs">
+      <DependentUpon>Thông_Tin_Mặt_Hàng.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Add\Thêm_Nhân_Viên.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Add\Thêm_Nhân_Viên.Designer.cs">
+      <DependentUpon>Thêm_Nhân_Viên.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Show\Thông_Tin_Nhân_Viên.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Show\Thông_Tin_Nhân_Viên.Designer.cs">
+      <DependentUpon>Thông_Tin_Nhân_Viên.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Đăng_Nhập.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Đăng_Nhập.Designer.cs">
+      <DependentUpon>Đăng_Nhập.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="QuênMậtKhẩu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="QuênMậtKhẩu.Designer.cs">
+      <DependentUpon>QuênMậtKhẩu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Add\Thêm_món_ăn.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Add\Thêm_món_ăn.Designer.cs">
+      <DependentUpon>Thêm_món_ăn.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Add\Thêm_Voucher.resx">
+      <DependentUpon>Thêm_Voucher.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialog\DialogQuenMatKhau.resx">
+      <DependentUpon>DialogQuenMatKhau.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialog\ĐặtLạiMậtKhẩu.resx">
+      <DependentUpon>ĐặtLạiMậtKhẩu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialog\Đổi_Mật_Khẩu.resx">
+      <DependentUpon>Đổi_Mật_Khẩu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Edit\Chỉnh_Sủa_Món_Ăn.resx">
+      <DependentUpon>Chỉnh_Sủa_Món_Ăn.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Edit\Chỉnh_Sửa_Thông_Tin_Nhân_Viên.resx">
+      <DependentUpon>Chỉnh_Sửa_Thông_Tin_Nhân_Viên.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Kế_Toán_Form.resx">
+      <DependentUpon>Kế_Toán_Form.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Main.resx">
+      <DependentUpon>Main.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Show\Chọn_Hình_Ảnh_Món_Ăn.resx">
+      <DependentUpon>Chọn_Hình_Ảnh_Món_Ăn.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Show\Thông_Tin_Hóa_Đơn.resx">
+      <DependentUpon>Thông_Tin_Hóa_Đơn.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Show\Thông_Tin_Mặt_Hàng.resx">
+      <DependentUpon>Thông_Tin_Mặt_Hàng.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Show\Thông_Tin_Nhân_Viên.resx">
+      <DependentUpon>Thông_Tin_Nhân_Viên.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Add\Thêm_Nhân_Viên.resx">
+      <DependentUpon>Thêm_Nhân_Viên.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Đăng_Nhập.resx">
+      <DependentUpon>Đăng_Nhập.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="QuênMậtKhẩu.resx">
+      <DependentUpon>QuênMậtKhẩu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Add\Thêm_món_ăn.resx">
+      <DependentUpon>Thêm_món_ăn.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <COMReference Include="Microsoft.Office.Core">
+      <Guid>{2DF8D04C-5BFA-101B-BDE5-00AA0044DE52}</Guid>
+      <VersionMajor>2</VersionMajor>
+      <VersionMinor>8</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>primary</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+    <COMReference Include="Microsoft.Office.Interop.Excel">
+      <Guid>{00020813-0000-0000-C000-000000000046}</Guid>
+      <VersionMajor>1</VersionMajor>
+      <VersionMinor>9</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>primary</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+    <COMReference Include="VBIDE">
+      <Guid>{0002E157-0000-0000-C000-000000000046}</Guid>
+      <VersionMajor>5</VersionMajor>
+      <VersionMinor>3</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>primary</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

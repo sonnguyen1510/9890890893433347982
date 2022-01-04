@@ -1,0 +1,153 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="Final_projectModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="Cart">
+    <Key>
+      <PropertyRef Name="productID" />
+      <PropertyRef Name="OrderID" />
+    </Key>
+    <Property Name="productID" Type="Decimal" Precision="18" Scale="0" Nullable="false" />
+    <Property Name="OrderID" Type="Decimal" Precision="18" Scale="0" Nullable="false" />
+    <Property Name="quantity" Type="Decimal" Precision="18" Scale="0" />
+    <Property Name="price" Type="Decimal" Precision="18" Scale="0" />
+    <NavigationProperty Name="Order" Relationship="Self.chitiet" FromRole="Cart" ToRole="Order" />
+    <NavigationProperty Name="Order1" Relationship="Self.chitietHoaDon" FromRole="Cart" ToRole="Order" />
+    <NavigationProperty Name="Product" Relationship="Final_projectModel.hanghoa" FromRole="Cart" ToRole="Product" />
+  </EntityType>
+  <EntityType Name="Order">
+    <Key>
+      <PropertyRef Name="OrderID" />
+    </Key>
+    <Property Name="OrderID" Type="Decimal" Precision="18" Scale="0" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="FullName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Phone" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Address" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="UserID" Type="Decimal" Precision="18" Scale="0" />
+    <Property Name="Totalprice" Type="Double" />
+    <Property Name="OrderDate" Type="DateTime" Precision="0" />
+    <Property Name="status" Type="Boolean" />
+    <NavigationProperty Name="Carts" Relationship="Self.chitiet" FromRole="Order" ToRole="Cart" />
+    <NavigationProperty Name="Carts1" Relationship="Self.chitietHoaDon" FromRole="Order" ToRole="Cart" />
+    <NavigationProperty Name="User" Relationship="Self.Khanhhang" FromRole="Order" ToRole="User" />
+  </EntityType>
+  <EntityType Name="Product">
+    <Key>
+      <PropertyRef Name="productID" />
+    </Key>
+    <Property Name="productID" Type="Decimal" Precision="18" Scale="0" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Image" Type="Binary" MaxLength="Max" FixedLength="false" />
+    <Property Name="productName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="productInfo" Type="String" MaxLength="300" FixedLength="false" Unicode="true" />
+    <Property Name="Productprice" Type="Double" />
+    <Property Name="Date" Type="DateTime" Precision="0" />
+    <Property Name="amount" Type="Decimal" Precision="18" Scale="0" />
+    <Property Name="status" Type="Decimal" Precision="18" Scale="0" />
+    <NavigationProperty Name="Carts" Relationship="Final_projectModel.hanghoa" FromRole="Product" ToRole="Cart" />
+  </EntityType>
+  <EntityType Name="User">
+    <Key>
+      <PropertyRef Name="UserID" />
+    </Key>
+    <Property Name="UserID" Type="Decimal" Precision="18" Scale="0" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="FullName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="UserName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Password" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="gender" Type="Boolean" />
+    <Property Name="birthday" Type="DateTime" Precision="0" />
+    <Property Name="Email" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="phone" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Role" Type="Int32" />
+    <Property Name="status" Type="Boolean" />
+    <NavigationProperty Name="Orders" Relationship="Self.Khanhhang" FromRole="User" ToRole="Order" />
+  </EntityType>
+  <EntityType Name="Voucher">
+    <Key>
+      <PropertyRef Name="VoucherID" />
+    </Key>
+    <Property Name="VoucherID" Type="Decimal" Precision="18" Scale="0" Nullable="false" />
+    <Property Name="VoucherName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="VoucherPrice" Type="Double" />
+    <Property Name="status" Type="Decimal" Precision="18" Scale="0" />
+  </EntityType>
+  <Association Name="chitiet">
+    <End Role="Order" Type="Self.Order" Multiplicity="1" />
+    <End Role="Cart" Type="Self.Cart" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Order">
+        <PropertyRef Name="OrderID" />
+      </Principal>
+      <Dependent Role="Cart">
+        <PropertyRef Name="OrderID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="chitietHoaDon">
+    <End Role="Order" Type="Self.Order" Multiplicity="1" />
+    <End Role="Cart" Type="Self.Cart" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Order">
+        <PropertyRef Name="OrderID" />
+      </Principal>
+      <Dependent Role="Cart">
+        <PropertyRef Name="OrderID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="Khanhhang">
+    <End Role="User" Type="Self.User" Multiplicity="0..1" />
+    <End Role="Order" Type="Self.Order" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="User">
+        <PropertyRef Name="UserID" />
+      </Principal>
+      <Dependent Role="Order">
+        <PropertyRef Name="UserID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="Final_projectEntities2" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="Carts" EntityType="Self.Cart" />
+    <EntitySet Name="Orders" EntityType="Self.Order" />
+    <EntitySet Name="Products" EntityType="Self.Product" />
+    <EntitySet Name="Users" EntityType="Self.User" />
+    <EntitySet Name="Vouchers" EntityType="Self.Voucher" />
+    <AssociationSet Name="chitiet" Association="Self.chitiet">
+      <End Role="Order" EntitySet="Orders" />
+      <End Role="Cart" EntitySet="Carts" />
+    </AssociationSet>
+    <AssociationSet Name="chitietHoaDon" Association="Self.chitietHoaDon">
+      <End Role="Order" EntitySet="Orders" />
+      <End Role="Cart" EntitySet="Carts" />
+    </AssociationSet>
+    <AssociationSet Name="Khanhhang" Association="Self.Khanhhang">
+      <End Role="User" EntitySet="Users" />
+      <End Role="Order" EntitySet="Orders" />
+    </AssociationSet>
+    <FunctionImport Name="sp_Product_ListAll" ReturnType="Collection(Final_projectModel.sp_Product_ListAll_Result)" />
+    <AssociationSet Name="hanghoa" Association="Final_projectModel.hanghoa">
+      <End Role="Product" EntitySet="Products" />
+      <End Role="Cart" EntitySet="Carts" />
+    </AssociationSet>
+  </EntityContainer>
+  <ComplexType Name="sp_Product_ListAll_Result">
+    <Property Type="Decimal" Name="productID" Nullable="false" Precision="18" Scale="0" />
+    <Property Type="Binary" Name="Image" Nullable="true" MaxLength="Max" />
+    <Property Type="String" Name="productName" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="productInfo" Nullable="true" MaxLength="300" />
+    <Property Type="Double" Name="Productprice" Nullable="true" />
+    <Property Type="DateTime" Name="Date" Nullable="true" />
+    <Property Type="Decimal" Name="amount" Nullable="true" Precision="18" Scale="0" />
+    <Property Type="Decimal" Name="status" Nullable="true" Precision="18" Scale="0" />
+  </ComplexType>
+  <Association Name="hanghoa">
+    <End Type="Final_projectModel.Product" Role="Product" Multiplicity="1" />
+    <End Type="Final_projectModel.Cart" Role="Cart" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Product">
+        <PropertyRef Name="productID" />
+      </Principal>
+      <Dependent Role="Cart">
+        <PropertyRef Name="productID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+</Schema>

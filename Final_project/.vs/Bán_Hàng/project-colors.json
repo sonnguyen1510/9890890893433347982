@@ -1,0 +1,26 @@
+{
+  "Version": 1,
+  "ProjectMap": {
+    "466ec21f-8836-4ff4-ad9e-f20c46adf37c": {
+      "ProjectGuid": "466ec21f-8836-4ff4-ad9e-f20c46adf37c",
+      "DisplayName": "Bán_Hàng_Online_Winform",
+      "ColorIndex": 0
+    },
+    "a2fe74e1-b743-11d0-ae1a-00a0c90fffc3": {
+      "ProjectGuid": "a2fe74e1-b743-11d0-ae1a-00a0c90fffc3",
+      "DisplayName": "Miscellaneous Files",
+      "ColorIndex": -1
+    },
+    "9b0c7780-608b-4d09-89d2-e4d4783444ee": {
+      "ProjectGuid": "9b0c7780-608b-4d09-89d2-e4d4783444ee",
+      "DisplayName": "Bán_Hàng_online_Webform",
+      "ColorIndex": 1
+    },
+    "640292b9-9285-4328-b499-31c75e034458": {
+      "ProjectGuid": "640292b9-9285-4328-b499-31c75e034458",
+      "DisplayName": "Bán_Hàng_Onl_WebForm",
+      "ColorIndex": 2
+    }
+  },
+  "NextColorIndex": 3
+}
