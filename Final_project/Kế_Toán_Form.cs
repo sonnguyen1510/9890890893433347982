@@ -298,5 +298,11 @@ namespace Final_project
 
             }
         }
+
+        private void thêmMónĂnToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Thêm_món_ăn add = new Thêm_món_ăn(this);
+            add.ShowDialog();
+        }
     }
 }

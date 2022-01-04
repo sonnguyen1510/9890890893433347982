@@ -18,14 +18,14 @@ namespace Final_project
         public string CNT = ConfigurationManager.ConnectionStrings["Final_project_database"].ConnectionString;
         public SqlConnection cnn;
         public Image LoadImg = null;
-        private Main Main;
+        private Form Main;
 
         public Thêm_món_ăn()
         {
             InitializeComponent();
         }
 
-        public Thêm_món_ăn(Main main)
+        public Thêm_món_ăn(Form main)
         {
             InitializeComponent();
             this.Main = main;
