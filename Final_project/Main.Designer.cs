@@ -72,13 +72,13 @@ namespace Final_project
             this.label4 = new System.Windows.Forms.Label();
             this.button15 = new System.Windows.Forms.Button();
             this.tabPage5 = new System.Windows.Forms.TabPage();
+            this.button3 = new System.Windows.Forms.Button();
             this.button16 = new System.Windows.Forms.Button();
             this.Main_ThôngTinHóaĐơn = new System.Windows.Forms.DataGridView();
             this.label5 = new System.Windows.Forms.Label();
             this.button19 = new System.Windows.Forms.Button();
             this.statusStrip1 = new System.Windows.Forms.StatusStrip();
             this.toolStripProgressBar1 = new System.Windows.Forms.ToolStripProgressBar();
-            this.button3 = new System.Windows.Forms.Button();
             this.menuStrip1.SuspendLayout();
             this.contextMenuStrip2.SuspendLayout();
             this.tabPage1.SuspendLayout();
@@ -321,6 +321,7 @@ namespace Final_project
             this.button4.TabIndex = 16;
             this.button4.Text = "Refresh";
             this.button4.UseVisualStyleBackColor = true;
+            this.button4.Click += new System.EventHandler(this.button4_Click);
             // 
             // button5
             // 
@@ -516,6 +517,16 @@ namespace Final_project
             this.tabPage5.Text = "Thông Tin Hóa Đơn";
             this.tabPage5.UseVisualStyleBackColor = true;
             // 
+            // button3
+            // 
+            this.button3.Location = new System.Drawing.Point(992, 250);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(144, 35);
+            this.button3.TabIndex = 24;
+            this.button3.Text = "Xem Thông Tin";
+            this.button3.UseVisualStyleBackColor = true;
+            this.button3.Click += new System.EventHandler(this.button3_Click_2);
+            // 
             // button16
             // 
             this.button16.Location = new System.Drawing.Point(1019, 86);
@@ -571,16 +582,6 @@ namespace Final_project
             // 
             this.toolStripProgressBar1.Name = "toolStripProgressBar1";
             this.toolStripProgressBar1.Size = new System.Drawing.Size(100, 15);
-            // 
-            // button3
-            // 
-            this.button3.Location = new System.Drawing.Point(992, 250);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(144, 35);
-            this.button3.TabIndex = 24;
-            this.button3.Text = "Xem Thông Tin";
-            this.button3.UseVisualStyleBackColor = true;
-            this.button3.Click += new System.EventHandler(this.button3_Click_2);
             // 
             // Main
             // 

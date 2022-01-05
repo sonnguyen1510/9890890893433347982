@@ -456,5 +456,20 @@ namespace Final_project
 
             }
         }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            String cmdStringKH = "Select * from [User] where [Role] is null and status = 1";
+            SqlCommand KH_cmd = new SqlCommand(cmdStringKH, cnn);
+            DataTable KH_dt = new DataTable();
+            DataColumn dcKH = new DataColumn("Tick", typeof(Boolean));
+            KH_dt.Columns.Add(dcKH);
+
+            SqlDataAdapter KH_DA = new SqlDataAdapter(KH_cmd);
+            KH_DA.Fill(KH_dt);
+            Main_ThôngTinNgDùng.AllowUserToAddRows = false;
+            Main_ThôngTinNgDùng.DataSource = KH_dt;
+            Main_ThôngTinNgDùng.Columns[0].Width = 40;
+        }
     }
 }
