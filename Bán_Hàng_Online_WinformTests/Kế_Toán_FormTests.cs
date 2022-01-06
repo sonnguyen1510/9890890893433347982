@@ -23,7 +23,7 @@ namespace Final_project.Tests
         {
             int a = 4;
             int b = 5;
-            Assert.IsTrue(a == b, "Test Sucessful");
+            Assert.IsTrue(a + b == 1, "Test Sucessful");
 
         }
 
