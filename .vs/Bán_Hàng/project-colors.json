@@ -5,7 +5,37 @@
       "ProjectGuid": "466ec21f-8836-4ff4-ad9e-f20c46adf37c",
       "DisplayName": "Bán_Hàng_Online_Winform",
       "ColorIndex": 0
+    },
+    "1ba0d6dd-68d2-4c45-b081-4f93ee857880": {
+      "ProjectGuid": "1ba0d6dd-68d2-4c45-b081-4f93ee857880",
+      "DisplayName": "Unit Test",
+      "ColorIndex": 1
+    },
+    "31cae64b-05fd-48cc-8567-a81789e4af94": {
+      "ProjectGuid": "31cae64b-05fd-48cc-8567-a81789e4af94",
+      "DisplayName": "Test",
+      "ColorIndex": 2
+    },
+    "492e4f3d-8002-4218-9891-3b927caaebee": {
+      "ProjectGuid": "492e4f3d-8002-4218-9891-3b927caaebee",
+      "DisplayName": "Test",
+      "ColorIndex": 3
+    },
+    "bf95ce98-fd7b-4843-b93b-908bf3e20d44": {
+      "ProjectGuid": "bf95ce98-fd7b-4843-b93b-908bf3e20d44",
+      "DisplayName": "Bán_Hàng_Online_WinformTests",
+      "ColorIndex": 4
+    },
+    "640292b9-9285-4328-b499-31c75e034458": {
+      "ProjectGuid": "640292b9-9285-4328-b499-31c75e034458",
+      "DisplayName": "Bán_Hàng_Onl_WebForm",
+      "ColorIndex": 5
+    },
+    "92ef66d2-0ffc-4a67-8b47-f8c6cb7fcee7": {
+      "ProjectGuid": "92ef66d2-0ffc-4a67-8b47-f8c6cb7fcee7",
+      "DisplayName": "Bán_Hàng_Onl_WebFormTests",
+      "ColorIndex": 6
     }
   },
-  "NextColorIndex": 1
+  "NextColorIndex": 7
 }

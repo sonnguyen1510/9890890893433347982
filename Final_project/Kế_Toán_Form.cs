@@ -60,7 +60,7 @@ namespace Final_project
 
         }
 
-        private void Kế_Toán_Form_Load(object sender, EventArgs e)
+        public void Kế_Toán_Form_Load(object sender, EventArgs e)
         {
             cnn = new SqlConnection(CNT);
             cnn.Open();

@@ -7,6 +7,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Bán_Hàng_Online_Winform",
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Bán_Hàng_Onl_WebForm", "Bán_Hàng_Onl_WebForm\Bán_Hàng_Onl_WebForm.csproj", "{640292B9-9285-4328-B499-31C75E034458}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Bán_Hàng_Online_WinformTests", "Bán_Hàng_Online_WinformTests\Bán_Hàng_Online_WinformTests.csproj", "{BF95CE98-FD7B-4843-B93B-908BF3E20D44}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Bán_Hàng_Onl_WebFormTests", "Bán_Hàng_Onl_WebFormTests\Bán_Hàng_Onl_WebFormTests.csproj", "{92EF66D2-0FFC-4A67-8B47-F8C6CB7FCEE7}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +25,14 @@ Global
 		{640292B9-9285-4328-B499-31C75E034458}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{640292B9-9285-4328-B499-31C75E034458}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{640292B9-9285-4328-B499-31C75E034458}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BF95CE98-FD7B-4843-B93B-908BF3E20D44}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BF95CE98-FD7B-4843-B93B-908BF3E20D44}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BF95CE98-FD7B-4843-B93B-908BF3E20D44}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BF95CE98-FD7B-4843-B93B-908BF3E20D44}.Release|Any CPU.Build.0 = Release|Any CPU
+		{92EF66D2-0FFC-4A67-8B47-F8C6CB7FCEE7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{92EF66D2-0FFC-4A67-8B47-F8C6CB7FCEE7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{92EF66D2-0FFC-4A67-8B47-F8C6CB7FCEE7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{92EF66D2-0FFC-4A67-8B47-F8C6CB7FCEE7}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
