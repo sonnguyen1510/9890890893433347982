@@ -1,4 +1,4 @@
-# hello
+# Note
 
 Sử dụng Visual Studio 2022
 
