@@ -1,4 +1,4 @@
-﻿namespace Final_project
+﻿namespace Bán_hàng_online_winform
 {
     partial class Thông_Tin_Nhân_Viên
     {

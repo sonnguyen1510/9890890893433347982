@@ -1,4 +1,4 @@
-﻿namespace Final_project.Edit
+﻿namespace Bán_hàng_online_winform.Edit
 {
     partial class Chỉnh_Sửa_Thông_Tin_Nhân_Viên
     {

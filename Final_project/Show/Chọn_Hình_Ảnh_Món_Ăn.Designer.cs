@@ -1,4 +1,4 @@
-﻿namespace Final_project
+﻿namespace Bán_hàng_online_winform
 {
     partial class CHọn_Hình_Ảnh_Món_Ăn
     {

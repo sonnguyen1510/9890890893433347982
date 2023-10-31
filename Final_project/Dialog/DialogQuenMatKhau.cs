@@ -8,7 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace Final_project.Dialog
+namespace Bán_hàng_online_winform.Dialog
 {
     public partial class DialogQuenMatKhau : Form
     {

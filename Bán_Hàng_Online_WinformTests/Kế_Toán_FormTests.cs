@@ -1,12 +1,12 @@
 ﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
-using Final_project;
+using Bán_hàng_online_winform;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Final_project.Tests
+namespace Bán_hàng_online_winform.Tests
 {
     [TestClass()]
     public class Kế_Toán_FormTests

@@ -10,7 +10,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace Final_project.Edit
+namespace Bán_hàng_online_winform.Edit
 {
     public partial class Chỉnh_Sửa_Thông_Tin_Nhân_Viên : Form
     {

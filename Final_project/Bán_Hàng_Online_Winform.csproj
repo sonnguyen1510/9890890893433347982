@@ -6,8 +6,8 @@
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProjectGuid>{466EC21F-8836-4FF4-AD9E-F20C46ADF37C}</ProjectGuid>
     <OutputType>WinExe</OutputType>
-    <RootNamespace>Final_project</RootNamespace>
-    <AssemblyName>Final_project</AssemblyName>
+    <RootNamespace>Bán_Hàng_Onl_WinForm</RootNamespace>
+    <AssemblyName>Bán_Hàng_Onl_WinForm</AssemblyName>
     <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
@@ -33,6 +33,12 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="BouncyCastle.Crypto, Version=1.8.9.0, Culture=neutral, PublicKeyToken=0e99375e54769942">
+      <HintPath>..\packages\BouncyCastle.1.8.9\lib\BouncyCastle.Crypto.dll</HintPath>
+    </Reference>
+    <Reference Include="itextsharp, Version=5.5.13.3, Culture=neutral, PublicKeyToken=8354ae6d2174ddca, processorArchitecture=MSIL">
+      <HintPath>..\packages\iTextSharp.5.5.13.3\lib\itextsharp.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Configuration" />
     <Reference Include="System.Core" />
@@ -78,6 +84,8 @@
     <Compile Include="Edit\Chỉnh_Sửa_Thông_Tin_Nhân_Viên.Designer.cs">
       <DependentUpon>Chỉnh_Sửa_Thông_Tin_Nhân_Viên.cs</DependentUpon>
     </Compile>
+    <Compile Include="Function\ExcelExporter.cs" />
+    <Compile Include="Function\PdfExporter.cs" />
     <Compile Include="Kế_Toán_Form.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -203,6 +211,7 @@
     <EmbeddedResource Include="Add\Thêm_món_ăn.resx">
       <DependentUpon>Thêm_món_ăn.cs</DependentUpon>
     </EmbeddedResource>
+    <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>

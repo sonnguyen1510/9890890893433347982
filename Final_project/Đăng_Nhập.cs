@@ -11,7 +11,7 @@ using System.Configuration;
 using System.Data.SqlClient;
 using System.Threading;
 
-namespace Final_project
+namespace Bán_hàng_online_winform
 {
     
     public partial class Đăng_Nhập : Form

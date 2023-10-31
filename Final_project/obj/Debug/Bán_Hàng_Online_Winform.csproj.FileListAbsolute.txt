@@ -52,3 +52,34 @@ C:\Users\son nguyen\OneDrive\Desktop\Final_Project\Final_project\obj\Debug\Bán_
 C:\Users\son nguyen\OneDrive\Desktop\Final_Project\Final_project\obj\Debug\Bán_Hàng_Online_Winform.csproj.CoreCompileInputs.cache
 C:\Users\son nguyen\OneDrive\Desktop\Final_Project\Final_project\obj\Debug\Final_project.exe
 C:\Users\son nguyen\OneDrive\Desktop\Final_Project\Final_project\obj\Debug\Final_project.pdb
+C:\Users\sonng\OneDrive\Desktop\Online-sales-system-winform-and-webform-\Final_project\bin\Debug\Bán_Hàng_Onl_WinForm.exe.config
+C:\Users\sonng\OneDrive\Desktop\Online-sales-system-winform-and-webform-\Final_project\bin\Debug\Bán_Hàng_Onl_WinForm.exe
+C:\Users\sonng\OneDrive\Desktop\Online-sales-system-winform-and-webform-\Final_project\bin\Debug\Bán_Hàng_Onl_WinForm.pdb
+C:\Users\sonng\OneDrive\Desktop\Online-sales-system-winform-and-webform-\Final_project\obj\Debug\Bán_Hàng_Online_Winform.csproj.AssemblyReference.cache
+C:\Users\sonng\OneDrive\Desktop\Online-sales-system-winform-and-webform-\Final_project\obj\Debug\Bán_Hàng_Online_Winform.csproj.SuggestedBindingRedirects.cache
+C:\Users\sonng\OneDrive\Desktop\Online-sales-system-winform-and-webform-\Final_project\obj\Debug\Bán_Hàng_Online_Winform.csproj.ResolveComReference.cache
+C:\Users\sonng\OneDrive\Desktop\Online-sales-system-winform-and-webform-\Final_project\obj\Debug\Bán_hàng_online_winform.Thêm_Voucher.resources
+C:\Users\sonng\OneDrive\Desktop\Online-sales-system-winform-and-webform-\Final_project\obj\Debug\Bán_hàng_online_winform.Dialog.DialogQuenMatKhau.resources
+C:\Users\sonng\OneDrive\Desktop\Online-sales-system-winform-and-webform-\Final_project\obj\Debug\Bán_hàng_online_winform.Dialog.ĐặtLạiMậtKhẩu.resources
+C:\Users\sonng\OneDrive\Desktop\Online-sales-system-winform-and-webform-\Final_project\obj\Debug\Bán_hàng_online_winform.Dialog.Đổi_Mật_Khẩu.resources
+C:\Users\sonng\OneDrive\Desktop\Online-sales-system-winform-and-webform-\Final_project\obj\Debug\Bán_hàng_online_winform.Edit.Chỉnh_Sủa_Món_Ăn.resources
+C:\Users\sonng\OneDrive\Desktop\Online-sales-system-winform-and-webform-\Final_project\obj\Debug\Bán_hàng_online_winform.Edit.Chỉnh_Sửa_Thông_Tin_Nhân_Viên.resources
+C:\Users\sonng\OneDrive\Desktop\Online-sales-system-winform-and-webform-\Final_project\obj\Debug\Bán_hàng_online_winform.Kế_Toán_Form.resources
+C:\Users\sonng\OneDrive\Desktop\Online-sales-system-winform-and-webform-\Final_project\obj\Debug\Bán_hàng_online_winform.Main.resources
+C:\Users\sonng\OneDrive\Desktop\Online-sales-system-winform-and-webform-\Final_project\obj\Debug\Bán_hàng_online_winform.CHọn_Hình_Ảnh_Món_Ăn.resources
+C:\Users\sonng\OneDrive\Desktop\Online-sales-system-winform-and-webform-\Final_project\obj\Debug\Bán_hàng_online_winform.Show.Thông_Tin_Hóa_Đơn.resources
+C:\Users\sonng\OneDrive\Desktop\Online-sales-system-winform-and-webform-\Final_project\obj\Debug\Bán_hàng_online_winform.Show.Thông_Tin_Mặt_Hàng.resources
+C:\Users\sonng\OneDrive\Desktop\Online-sales-system-winform-and-webform-\Final_project\obj\Debug\Bán_hàng_online_winform.Thông_Tin_Nhân_Viên.resources
+C:\Users\sonng\OneDrive\Desktop\Online-sales-system-winform-and-webform-\Final_project\obj\Debug\Bán_hàng_online_winform.Thêm_Nhân_Viên.resources
+C:\Users\sonng\OneDrive\Desktop\Online-sales-system-winform-and-webform-\Final_project\obj\Debug\Bán_hàng_online_winform.Đăng_Nhập.resources
+C:\Users\sonng\OneDrive\Desktop\Online-sales-system-winform-and-webform-\Final_project\obj\Debug\Bán_Hàng_Onl_WinForm.Properties.Resources.resources
+C:\Users\sonng\OneDrive\Desktop\Online-sales-system-winform-and-webform-\Final_project\obj\Debug\Bán_hàng_online_winform.QuênMậtKhẩu_Form.resources
+C:\Users\sonng\OneDrive\Desktop\Online-sales-system-winform-and-webform-\Final_project\obj\Debug\Bán_hàng_online_winform.Thêm_món_ăn.resources
+C:\Users\sonng\OneDrive\Desktop\Online-sales-system-winform-and-webform-\Final_project\obj\Debug\Bán_Hàng_Online_Winform.csproj.GenerateResource.cache
+C:\Users\sonng\OneDrive\Desktop\Online-sales-system-winform-and-webform-\Final_project\obj\Debug\Bán_Hàng_Online_Winform.csproj.CoreCompileInputs.cache
+C:\Users\sonng\OneDrive\Desktop\Online-sales-system-winform-and-webform-\Final_project\obj\Debug\Bán_Hàng_Onl_WinForm.exe
+C:\Users\sonng\OneDrive\Desktop\Online-sales-system-winform-and-webform-\Final_project\obj\Debug\Bán_Hàng_Onl_WinForm.pdb
+C:\Users\sonng\OneDrive\Desktop\Online-sales-system-winform-and-webform-\Final_project\bin\Debug\BouncyCastle.Crypto.dll
+C:\Users\sonng\OneDrive\Desktop\Online-sales-system-winform-and-webform-\Final_project\bin\Debug\itextsharp.dll
+C:\Users\sonng\OneDrive\Desktop\Online-sales-system-winform-and-webform-\Final_project\bin\Debug\itextsharp.xml
+C:\Users\sonng\OneDrive\Desktop\Online-sales-system-winform-and-webform-\Final_project\obj\Debug\Bán_Hàng_Online_Winform.csproj.CopyComplete

@@ -9,7 +9,7 @@
 //------------------------------------------------------------------------------
 
 
-namespace Final_project.Properties
+namespace Bán_hàng_online_winform.Properties
 {
     /// <summary>
     ///   A strongly-typed resource class, for looking up localized strings, etc.

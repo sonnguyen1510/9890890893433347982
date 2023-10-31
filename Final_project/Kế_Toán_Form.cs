@@ -9,11 +9,12 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using Final_project.Show;
+using Bán_hàng_online_winform.Show;
 using System.Text.RegularExpressions;
-using Final_project.Dialog;
+using Bán_hàng_online_winform.Dialog;
+using Bán_Hàng_Onl_WinForm.Function;
 
-namespace Final_project
+namespace Bán_hàng_online_winform
 {
     public partial class Kế_Toán_Form : Form
     {
@@ -28,7 +29,6 @@ namespace Final_project
             InitializeComponent();
 
 
-
             //KếToán_MặtHàng_TB.Columns.Add(newCol);
 
         }
@@ -38,7 +38,6 @@ namespace Final_project
             InitializeComponent();
             this.Đăng_Nhập = đăng_Nhập;
             this.UserName = UserName;
-
 
 
             //KếToán_MặtHàng_TB.Columns.Add(newCol);
@@ -65,7 +64,7 @@ namespace Final_project
             cnn = new SqlConnection(CNT);
             cnn.Open();
 
-            String cmdStringProduct = "Select ProductID as Mã_sản_phẩm,ProductName as Tên_sản_phẩm,ProductInfo as Thông_tin_sản_phẩm,Productprice as Giá_sản_phẩm,amount as Số_lượng_sản_phẩm,[Image] as Hình_ảnh from Product where status = 1";
+            String cmdStringProduct = "Select ProductID as ID,ProductName as Name,ProductInfo as Information,Productprice as Price,amount as Amount from Product where status = 1";
             SqlCommand cmdProduct = new SqlCommand(cmdStringProduct, cnn);
 
 
@@ -121,7 +120,7 @@ namespace Final_project
 
         private void Main_refesh_Click(object sender, EventArgs e)
         {
-            String cmdStringProduct = "Select ProductID as Mã_sản_phẩm,ProductName as Tên_sản_phẩm,ProductInfo as Thông_tin_sản_phẩm,Productprice as Giá_sản_phẩm,amount as Số_lượng_sản_phẩm from Product where status = 1";
+            String cmdStringProduct = "Select ProductID as ID,ProductName as Name,ProductInfo as Information,Productprice as Price,amount as Amount from Product where status = 1";
             SqlCommand cmdProduct = new SqlCommand(cmdStringProduct, cnn);
 
 
@@ -148,7 +147,7 @@ namespace Final_project
                 Boolean IsCheck = Check(row["Tick"].ToString());
                 if (IsCheck)
                 {
-                    Thông_Tin_Mặt_Hàng show = new Thông_Tin_Mặt_Hàng(int.Parse(row["Mã_sản_phẩm"].ToString()));
+                    Thông_Tin_Mặt_Hàng show = new Thông_Tin_Mặt_Hàng(int.Parse(row["ID"].ToString()));
                     show.ShowDialog();
                 }
 
@@ -199,7 +198,7 @@ namespace Final_project
 
         private void button1_Click(object sender, EventArgs e)
         {
-            String cmdStringProduct = "Select ProductID as Mã_sản_phẩm,ProductName as Tên_sản_phẩm,ProductInfo as Thông_tin_sản_phẩm,Productprice as Giá_sản_phẩm,amount as Số_lượng_sản_phẩm from Product where  [Date] BETWEEN '"+MặtHàng_StartDay.Value+"' AND '"+MặtHàng_Endday.Value+"' AND status = 1";
+            String cmdStringProduct = "Select ProductID as ID,ProductName as Name,ProductInfo as Information,Productprice as Price,amount as Amount from Product where status = 1";
             SqlCommand cmdProduct = new SqlCommand(cmdStringProduct, cnn);
 
 
@@ -214,41 +213,11 @@ namespace Final_project
             KếToán_MặtHàng_TB.DataSource = dtProduct;
             KếToán_MặtHàng_TB.Columns[0].Width = 40;
 
-            XP(KếToán_MặtHàng_TB);
+            PdfExporter.ExportDataTableToPdf(dtProduct);
         }
 
-        public void XP(DataGridView GV)
-        {
-            saveFileDialog1.InitialDirectory = "C:";
-            saveFileDialog1.Filter = "Execl file (*.xlsx)|*.xlsx | Excel 2007 (*.xls) | *.xls ";
-            saveFileDialog1.FileName = "";
-            saveFileDialog1.Title = "Xuất file thống kê";
-            //saveFileDialog1.FilterIndex = 1;
-            if (saveFileDialog1.ShowDialog() != DialogResult.Cancel)
-            {
-                Microsoft.Office.Interop.Excel.Application ExcelApp = new Microsoft.Office.Interop.Excel.Application();
-                ExcelApp.Application.Workbooks.Add(Type.Missing);
+        
 
-                ExcelApp.Columns.ColumnWidth = 15;
-
-                for (int i = 1; i < GV.Columns.Count + 1; i++)
-                {
-                    ExcelApp.Cells[1, i] = GV.Columns[i - 1].HeaderText;
-                }
-
-                for (int i = 0; i < GV.Rows.Count; i++)
-                {
-                    for (int j = 0; j < GV.Columns.Count; j++)
-                    {
-                        ExcelApp.Cells[i + 2, j + 1] = GV.Rows[i].Cells[j].Value.ToString();
-                    }
-                }
-
-                ExcelApp.ActiveWorkbook.SaveCopyAs(saveFileDialog1.FileName.ToString());
-                ExcelApp.ActiveWorkbook.Saved = true;
-                ExcelApp.Quit();
-            }
-        }
 
         private void button2_Click(object sender, EventArgs e)
         {
@@ -264,7 +233,20 @@ namespace Final_project
             KếToán_HóaĐơn_TB.AllowUserToAddRows = false;
             KếToán_HóaĐơn_TB.DataSource = Order_dt;
 
-            XP(KếToán_HóaĐơn_TB);
+            //XP(KếToán_HóaĐơn_TB);
+            DataTable export = new DataTable();
+            export = Order_dt.Copy();
+            export.Columns.Remove("Tick");
+
+            PdfExporter.ExportDataTableToPdf(export);
+        }
+
+        public static void RemoveColumn(DataTable dataTable, string columnName)
+        {
+            if (dataTable.Columns.Contains(columnName))
+            {
+                dataTable.Columns.Remove(columnName);
+            }
         }
 
         private void MặtHàng_StartDay_ValueChanged(object sender, EventArgs e)

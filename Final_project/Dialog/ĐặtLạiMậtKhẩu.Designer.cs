@@ -1,4 +1,4 @@
-﻿namespace Final_project.Dialog
+﻿namespace Bán_hàng_online_winform.Dialog
 {
     partial class ĐặtLạiMậtKhẩu
     {

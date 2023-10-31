@@ -1,4 +1,4 @@
-﻿namespace Final_project.Edit
+﻿namespace Bán_hàng_online_winform.Edit
 {
     partial class Chỉnh_Sủa_Món_Ăn
     {

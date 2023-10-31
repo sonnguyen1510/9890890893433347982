@@ -9,7 +9,7 @@
 //------------------------------------------------------------------------------
 
 
-namespace Final_project.Properties
+namespace Bán_hàng_online_winform.Properties
 {
     [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
     [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.VisualStudio.Editors.SettingsDesigner.SettingsSingleFileGenerator", "11.0.0.0")]

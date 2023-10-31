@@ -10,7 +10,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace Final_project.Show
+namespace Bán_hàng_online_winform.Show
 {
     public partial class Thông_Tin_Hóa_Đơn : Form
     {

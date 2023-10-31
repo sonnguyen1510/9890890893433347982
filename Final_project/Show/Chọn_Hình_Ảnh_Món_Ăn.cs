@@ -7,10 +7,10 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using Final_project.Show;
-using Final_project.Edit;
+using Bán_hàng_online_winform.Show;
+using Bán_hàng_online_winform.Edit;
 
-namespace Final_project
+namespace Bán_hàng_online_winform
 {
     public partial class CHọn_Hình_Ảnh_Món_Ăn : Form
     {

@@ -9,10 +9,10 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using Final_project.Dialog;
-using Final_project.Show;
+using Bán_hàng_online_winform.Dialog;
+using Bán_hàng_online_winform.Show;
 
-namespace Final_project
+namespace Bán_hàng_online_winform
 {
     public partial class Main : Form
     {

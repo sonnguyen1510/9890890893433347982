@@ -10,10 +10,10 @@ using System.Windows.Forms;
 using System.Net;
 using System.Net.Mail;
 using System.Configuration;
-using Final_project.Dialog;
+using Bán_hàng_online_winform.Dialog;
 using System.Data.SqlClient;
 
-namespace Final_project
+namespace Bán_hàng_online_winform
 {
     public partial class QuênMậtKhẩu_Form : Form
     {
